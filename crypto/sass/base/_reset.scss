@@ -1,0 +1,92 @@
+@use '../abstracts/variables';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 62.5%;
+    font-weight: 500;
+}
+
+body {
+    background: #0e0e0e;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--color-link-hover);
+      border-radius: 4px;
+    }
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+select {
+    border: none;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.show {
+    display: block;
+}
+
+.green {
+    color: var(--color-link-hover);
+    font-size: 1.2rem;
+    margin: 0 0.4rem 0;
+}
+
+.red {
+    color: red;
+    font-size: 1.2rem;
+    margin: 0 0.4rem 0;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

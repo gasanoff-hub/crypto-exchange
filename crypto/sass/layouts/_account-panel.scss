@@ -1,0 +1,68 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins' as a;
+
+.account-panel {
+    margin: 0 0 0 2rem;
+    background: var(--color-section-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 1rem;
+    position: relative;
+    height: auto;
+
+    &__title {
+        font-size: 1.5rem;
+        color: var(--color-text-primary);
+        margin: 0 0 2rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 4rem;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--color-border);
+        }
+    }
+
+    &__info-title {
+        font-size: 1.5rem;
+        color: var(--color-text-primary);
+        margin: 0 0 1rem;
+    }
+
+    &__margin-info {
+        @include a.flex($direction: column);
+        gap: 1rem;
+    }
+
+    &__text {
+        color: var(--color-text-secondary);
+        font-size: 1.3rem;
+    }
+
+    &__ratio {
+        color: var(--color-link-hover);
+        font-size: 1.3rem;
+    }
+
+    &__value {
+        color: var(--color-text-primary);
+        font-size: 1.3rem
+    }
+
+    &__row {
+        @include a.flex(space-between, center);
+    }
+
+    &__buttons {
+        @include a.flex();
+        gap: 1rem;
+        margin: 2rem 0 0;
+    }
+
+    @include a.respond(md) {
+        display: none;
+    }
+ }

@@ -1,0 +1,109 @@
+@use '../abstracts/mixins' as a;
+@use '../abstracts/variables';
+
+.trending {
+    grid-area: trending;
+    @include a.flex(space-between, center);
+    padding: 0 2rem;
+    background: var(--color-section-bg);
+    height: 3rem;
+    margin: 0 2rem 0;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    white-space: nowrap;
+    
+    &__title {
+        @include a.transition-bg-color;
+        color: var(--color-text-primary);
+        font-size: 1.5rem;
+        margin: 0 3rem 0 0;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--color-link-hover);
+        }
+    }
+
+    &__scroller {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+    }
+
+    &__menu {
+        display: flex;
+        animation: 30s slide infinite linear;
+
+        &-item {
+            @include a.flex();
+            margin: 0 1.6rem 0 0;
+            height: 100%;
+        }
+    }
+
+    &__more-title {
+        @include a.transition-bg-color;
+        color: var(--color-link-hover);
+        font-size: 1.5rem;
+        margin: 0 0 0 3rem;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--color-text-primary);
+        }
+    }
+
+    @include a.respond(xs) {
+        padding: 0 1rem;
+
+        &__title {
+            font-size: 1.2rem;
+            margin: 0 1rem 0 0rem;
+        }
+
+        &__more-title {
+            font-size: 1.2rem;
+            margin: 0 0 0 1rem;
+        }
+    }
+
+    @include a.respond(sm) {
+        &__more-title, &__title {
+            display: none;
+        }
+    }
+}
+
+.coin {
+    &-name, &-price, &-change {
+        color: var(--color-text-primary);
+        font-size: 1.2rem;
+    }
+
+    &-name {
+        cursor: pointer;
+        @include a.transition-color;
+
+        &:hover {
+            color: var(--color-text-secondary);
+        }
+    }
+
+    &-change {
+        color: var(--color-link-hover);
+        margin: 0 0.4rem 0;
+    }
+}
+
+.animation-paused{
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-100%);
+    }
+}

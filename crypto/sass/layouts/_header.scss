@@ -1,0 +1,215 @@
+@use '../abstracts/mixins' as a;
+@use '../abstracts/variables';
+
+.header {
+    grid-area: header;
+    width: 100%;
+    height: 6.4rem;
+    background: var(--color-section-bg);
+    position: relative;
+
+    & .container {
+        @include a.flex(space-between, center);
+        height: 100%;
+    }
+
+    &__logo {
+        @include a.flex(center, center);
+        height: 4rem;
+        
+        &-text {
+            @include a.flex($align-items: center);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            height: 100%;
+        }
+
+        &-img {
+            height: 100%
+        }
+    }
+
+    &__menu {
+        @include a.flex(center, center);
+        background: var(--color-menu-bg);
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        &-link {
+            font-size: 1.7rem;
+            padding: 1rem;
+            color: var(--color-text-primary);
+            @include a.transition-bg-color;
+
+            &:hover {
+                background: var(--color-link-hover);
+                color: var(--color-menu-bg)
+            }
+        }
+    }
+
+    &__actions {
+        @include a.flex(space-between, center);
+        gap: 2rem;
+    }
+
+    &__selected--flag {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    &__language--option {
+        @include a.flex(flex-start, center);
+        background: var(--color-section-bg);
+        gap: 1rem;
+        width: 15rem;
+        height: 5rem;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--color-border);
+        cursor: pointer;
+    }
+
+    &__language--title {
+        position: absolute;
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--color-text-secondary);
+        font-size: 2rem;
+    }
+
+    &__language--flag {
+        height: 2rem;
+    }
+
+    &__language--name {
+        color: var(--color-text-primary);
+        font-size: 1.3rem;
+    }
+
+    &__language--overlay {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: var(--glass);
+        backdrop-filter: blur(6px);
+        z-index: 9;
+    }
+
+    &__language--options {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5rem;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: auto;
+        padding: 7rem 5rem 5rem;
+        transform: translate(-50%, -50%);
+        background: var(--color-menu-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 1rem;
+        box-shadow: var(--card-shadow);
+        z-index: 10;
+    }
+
+    @include a.respond(bp85) {
+        &__logo {
+            height: 3.3rem;
+
+            &-text {
+                font-size: 2rem;
+                @include a.flex($align-items: center);
+            }
+        }
+
+        &__menu-link {
+            font-size: 1.4rem;
+        }
+
+        &__selected--flag {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        &__language--title {
+            left: 0;
+            width: 100%;
+            text-align: center;
+            transform: none;
+        }
+
+        &__language--options {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 7rem 2rem 3rem;
+            gap: 3rem;
+        }
+
+        &__language--option {
+            width: 12rem;
+            padding: 0.5rem;
+        }
+
+        &__language--name {
+            font-size: 1rem;
+        }
+    }
+
+    @include a.respond(sm) {
+        &__menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 8.4rem;
+            right: 1rem;
+            left: 22%;
+            z-index: 1000;
+            gap: 3rem;
+            border-radius: 0;
+            background: none;
+            text-align: center;
+
+            &-link {
+                border: 1px solid var(--color-border);
+                width: 100%;
+                border-radius: 0.5rem;
+                padding: 1rem;
+            }
+        }
+
+        &__language--options {
+            gap: 1rem;
+        }
+    }
+}
+
+.nav__toggle {
+    display: none;
+    position: absolute;
+    top: 6.4rem;
+    right: 0;
+    left: 20%;
+    bottom: 0;
+    height: 100vh;
+    z-index: 999;
+    background: var(--color-menu-bg);
+    border-left: 1px solid var(--color-border);
+}
+
+.nav-toggle__active {
+    display: flex;
+}
+
+// body
+.menu__open {
+    overflow: hidden;
+}
+
+.inactive {
+    pointer-events: none;
+}

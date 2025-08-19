@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <title>NEXBIT</title>
+</head>
+<body>
+
+    <div class="dashboard-grid">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container">
+                <!-- HEADER LOGO -->
+                <a href="#" class="header__logo">
+                    <img class="header__logo-img" src="/img/Logo.webp" alt="Logo">
+                    <span class="header__logo-text">NEXBIT</span>
+                </a>
+                <!-- HEADER MENU -->
+                <nav class="header__menu">
+                    <a href="/index.html" class="header__menu-link">Swap</a>
+                    <a href="/html/liquidity.html" class="header__menu-link">Liquidity</a>
+                    <a href="#" class="header__menu-link">Discover</a>
+                    <a href="#" class="header__menu-link">About</a>
+                    <button class="btn btn-connect__mobile">Connect Wallet</button>
+                </nav>
+                <!-- HEADER ACTIONS -->
+                <div class="header__actions">
+                    <button class="btn btn-connect">Connect Wallet</button>
+                    <i class="icon icon-notification fa-solid fa-bell"></i>
+
+                    <!-- LANGUAGE SELECT -->
+                    <div class="header__language">
+                        <div class="header__language--selected">
+                            <img class="header__selected--flag" src="/img/United_Kingdom_flag.webp" alt="EN" />
+                        </div>
+
+                        <div class="header__language--overlay hidden"></div>
+
+                        <!--LANGUAGE OPTIONS -->
+                        <div class="header__language--options hidden">
+                            <h1 class="header__language--title">CHOOSE YOUR LANGUAGE</h1>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="en">
+                                <img class="header__language--flag" src="/img/United_Kingdom_flag.webp" alt="EN" />
+                                <span class="header__language--name">English</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="az">
+                                <img class="header__language--flag" src="/img/Azerbaijan_flag.webp" alt="AZ" />
+                                <span class="header__language--name">Azerbaijan</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="ru">
+                                <img class="header__language--flag" src="/img/Russia_flag.webp" alt="RU" />
+                                <span class="header__language--name">Russia</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="ZH">
+                                <img class="header__language--flag" src="/img/china_flag.webp" alt="ZH" />
+                                <span class="header__language--name">China</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="FR">
+                                <img class="header__language--flag" src="/img/French_flag.webp" alt="FR" />
+                                <span class="header__language--name">French</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="DE">
+                                <img class="header__language--flag" src="/img/Germany_Flag.webp" alt="DE" />
+                                <span class="header__language--name">Germany</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="JA">
+                                <img class="header__language--flag" src="/img/Japanese_flag.webp" alt="JA" />
+                                <span class="header__language--name">Japanese</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="KO">
+                                <img class="header__language--flag" src="/img/Korean_flag.webp" alt="KO" />
+                                <span class="header__language--name">Korean</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="PT">
+                                <img class="header__language--flag" src="/img/Portuguese_flag.webp" alt="PT" />
+                                <span class="header__language--name">Portuguese</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="ES">
+                                <img class="header__language--flag" src="/img/Spanish_flag.webp" alt="ES" />
+                                <span class="header__language--name">Spanish</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="TR">
+                                <img class="header__language--flag" src="/img/Turkey_flag.webp" alt="TR" />
+                                <span class="header__language--name">Turkey</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="IN">
+                                <img class="header__language--flag" src="/img/india_flag.webp" alt="IN" />
+                                <span class="header__language--name">India</span>
+                            </div>
+                        </div>
+                        <!--LANGUAGE OPTION END -->
+                    </div> 
+
+                    <button class="btn btn-burger__menu">
+                        <i class="icon icon-burger__menu fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="nav__toggle"></div>
+        </header>
+
+        <!-- TRENDING -->
+        <section class="trending">
+            <a href="#" class="trending__title">
+                Trending Soon <i class="icon icon-rocket fa-solid fa-rocket"></i>
+            </a>
+
+            <div class="trending__scroller">
+                <nav class="trending__menu" id="menu-1">
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+                    
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+                </nav>
+
+                <nav class="trending__menu" id="menu-2"> 
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+                    
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+
+                    <div class="trending__menu-item">
+                        <span class="coin-name"></span>
+                        <span class="coin-change"></span>
+                        <span class="coin-price"></span> 
+                    </div>
+                </nav>
+            </div>
+
+            <a href="#" class="trending__more-title">Discover More</a>
+        </section>
+
+        <!-- SIDEBAR -->
+        <aside class="swap">
+            <header class="swap__header">
+                <div class="swap__left">
+                    <h4 class="swap__title">Swap to:</h4>       
+                    <div class="swap__mode">
+                        <button class="btn btn-swap btn-swap--crypto btn-swap__mode--active">Crypto</button>
+                        <button class="btn btn-swap btn-swap--fiat">Fiat</button>
+                    </div>
+                </div>
+
+                <div class="swap__icons">
+                    <i class="icon icon-swap fa-solid fa-circle-info"></i>
+                    <i class="icon icon-swap fa-solid fa-share-nodes"></i>
+                    <i class="icon icon-swap fa-solid fa-sliders"></i>
+                </div>
+            </header>
+
+            <div class="swap__form">
+                <label class="swap__label">Buy or sell any token instantly at the best price</label>
+
+                <div class="swap__search">
+                    <i class="icon icon-search__input fa-solid fa-magnifying-glass"></i>
+                    <input type="text" class="swap__search-input" placeholder='Search'>
+                </div>
+
+                <div class="swap__search--list hidden"></div>
+
+                <div class="swap__inputs">
+                    <div class="swap__input-group" id="swap__input-1">
+                        <div class="swap__amount">
+                            <input type="number" class="swap__input" value="0">
+                            <span class="swap__approx-value"></span>
+                        </div>
+
+                        <div class="swap__currency">
+                            <i class="icon icon-swap__currency fa-solid fa-wallet"></i>
+                            <span class="swap__currency-value">0</span>
+                            <button class="btn btn-swap__currency"></button>
+                        </div>
+                    </div>
+
+                    <div class="swap__switch">
+                        <i class="icon icon-exchange fa-solid fa-arrows-rotate"></i>
+                    </div>
+
+                    <div class="swap__input-group" id="swap__input-2">
+                        <div class="swap__amount">
+                            <input type="number" class="swap__input" value="0">
+                            <span class="swap__approx-value"></span>
+                        </div>
+
+                        <div class="swap__currency">
+                            <i class="icon icon-swap__currency fa-solid fa-wallet"></i>
+                            <span class="swap__currency-value">0</span>
+                            <button class="btn btn-swap__currency"></button>
+                        </div>
+                    </div>
+
+                    <div class="swap__select--token hidden">
+                        <div class="swap__select--header">
+                            <h1 class="swap__select--title">Select Token</h1>
+                            <div class="swap__select-search--area">
+                                <input type="text" class="swap__select--input" placeholder="Search symbol, contract address">
+                                <i class="icon icon-search fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="swap__select--list"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swap__settings">
+                    <span class="swap__slippage-text">Max Slippage
+                        <i class="icon icon-info fa-solid fa-circle-info"></i> :
+                    </span>
+                    <span class="swap__slippage-value">0.5%
+                        <i class="icon icon-short fa-solid fa-caret-down"></i>
+                    </span>
+                </div>
+
+                <div class="swap__options">
+                    <button class="btn btn-swap__option btn-swap__option--active">
+                        <i class="icon icon-swap__option fa-solid fa-dollar-sign"></i>Max Return
+                    </button>
+                    <button class="btn btn-swap__option">
+                        <i class="icon icon-swap__option fa-solid fa-gas-pump"></i>Lowest Gas
+                    </button>
+                </div>
+
+                <div class="swap__info">
+                    <div class="swap__info--header">
+                        <h5 class="swap__info--title">MORE INFORMATION</h5>
+                        <i class="icon icon-sort__up fa-solid fa-sort-up"></i>
+                    </div>
+
+                    <div class="swap__info-row">
+                        <span class="swap__info--span">Minimum Received
+                            <i class="icon icon fa-solid fa-circle-info"></i>
+                        </span>
+                        <span class="swap__info--value">5.0 USD</span>
+                    </div>
+
+                    <div class="swap__info-row">
+                        <span class="swap__info--span">Gas Fee
+                            <i class="icon icon fa-solid fa-circle-info"></i>
+                        </span>
+                        <span class="swap__info--value">$16.34</span>
+                    </div>
+
+                    <div class="swap__info-row">
+                        <span class="swap__info--span">Price Impact
+                            <i class="icon icon fa-solid fa-circle-info"></i>
+                        </span>
+                        <span class="swap__info--value">&lt; 0.01%</span>
+                    </div>
+                </div>
+
+                <button class="btn btn__swap--submit">Swap</button>
+            </div>
+        </aside>
+
+        <!-- CHART -->
+        <main class="chart"></main>
+
+        <!-- TRADE HISTORY -->
+        <section class="trade-history">
+            <h1 class="trade-history__title">
+                    <i class="icon icon-history fa-solid fa-diagram-project"></i>
+                    Your trade history
+            </h1>
+
+            <table class="trade-history__table">
+
+                    <thead>
+                        <tr>
+                            <th>Account <i class="icon icon-short fa-solid fa-caret-down"></i></th>
+                            <th>Height <i class="icon icon-short fa-solid fa-caret-down"></i></th>
+                            <th>Hash <i class="icon icon-short fa-solid fa-caret-down"></i></th>
+                            <th>InToken <i class="icon icon-short fa-solid fa-caret-down"></i></th>
+                            <th>InAmount <i class="icon icon-short fa-solid fa-caret-down"></i></th>
+                            <th>OutToken <i class="icon icon-short fa-solid fa-caret-down"></i></th>
+                            <th>OutAmount <i class="icon icon-short fa-solid fa-caret-down"></i></th>
+                            <th>Age<i class="icon icon-short fa-solid fa-caret-down"></i></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>0x17d4****f0dD</td>
+                            <td>8,912,938</td>
+                            <td><a href="#">0x3fE5F****E9af39</a></td>
+                            <td>USDT</td>
+                            <td>5</td>
+                            <td>BTC</td>
+                            <td>1244.45</td>
+                            <td>19h ago</td>
+                        </tr>
+                        <tr>
+                            <td>0x83d4****A9bC</td>
+                            <td>4,546,503</td>
+                            <td><a href="#">0xe9CEA****CA598a</a></td>
+                            <td>TRON</td>
+                            <td>3</td>
+                            <td>DOGE</td>
+                            <td>57.32</td>
+                            <td>1d 17h ago</td>
+                        </tr>
+                        <tr>
+                            <td>0x17d4****40Dh</td>
+                            <td>21,124,423</td>
+                            <td><a href="#">0x3fE5F****E5ds45</a></td>
+                            <td>USDT</td>
+                            <td>5</td>
+                            <td>DOGS</td>
+                            <td>44.92</td>
+                            <td>1d 19h ago</td>
+                        </tr>
+                        <tr>
+                            <td>0x17d4****CS8e</td>
+                            <td>18,908,503</td>
+                            <td><a href="#">0xe9CEA****vfD037</a></td>
+                            <td>TON</td>
+                            <td>2</td>
+                            <td>NOTCOIN</td>
+                            <td>376.32</td>
+                            <td>1d 22h ago</td>
+                        </tr>
+                        <tr>
+                            <td>0x17d4****f0dD</td>
+                            <td>8,912,938</td>
+                            <td><a href="#">0x3fE5F****E9af39</a></td>
+                            <td>USDT</td>
+                            <td>5</td>
+                            <td>BTC</td>
+                            <td>1244.45</td>
+                            <td>19h ago</td>
+                        </tr>
+                        <tr>
+                            <td>0x83d4****A9bC</td>
+                            <td>4,546,503</td>
+                            <td><a href="#">0xe9CEA****CA598a</a></td>
+                            <td>TRON</td>
+                            <td>3</td>
+                            <td>DOGE</td>
+                            <td>57.32</td>
+                            <td>1d 17h ago</td>
+                        </tr>
+                        <tr>
+                            <td>0x17d4****40Dh</td>
+                            <td>21,124,423</td>
+                            <td><a href="#">0x3fE5F****E5ds45</a></td>
+                            <td>USDT</td>
+                            <td>5</td>
+                            <td>DOGS</td>
+                            <td>44.92</td>
+                            <td>1d 19h ago</td>
+                        </tr>
+                        <tr>
+                            <td>0x17d4****CS8e</td>
+                            <td>18,908,503</td>
+                            <td><a href="#">0xe9CEA****vfD037</a></td>
+                            <td>TON</td>
+                            <td>2</td>
+                            <td>NOTCOIN</td>
+                            <td>376.32</td>
+                            <td>1d 22h ago</td>
+                        </tr>
+                    </tbody>
+
+            </table>
+        </section>
+
+        <!-- ACCOUNT PANEL -->
+        <section class="account-panel">
+            <h3 class="account-panel__title">Account</h3>
+            <div class="account-panel__margin-info">
+                <div class="account-panel__info-title">Margin Ratio</div>
+                <div class="account-panel__row">
+                    <span class="account-panel__text">Margin Ratio</span>
+                    <span class="account-panel__ratio">
+                        <i class="icon icon-ratio fa-solid fa-chart-simple"></i>0.00%
+                    </span>
+                </div>
+                <div class="account-panel__row">
+                    <span class="account-panel__text">Maintenance Margin</span>
+                    <span class="account-panel__value">0.0000 USDT</span>
+                </div>
+                <div class="account-panel__row">
+                    <span class="account-panel__text">Margin Balance</span>
+                    <span class="account-panel__value">0.0000 USDT</span>
+                </div>
+            </div>
+            <div class="account-panel__buttons">
+                <button class="btn btn__account-panel" disabled>Transfer</button>
+                <button class="btn btn__account-panel" disabled>Buy Crypto</button>
+                <button class="btn btn__account-panel" disabled>Swap</button>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__copyright">2025 © NEXBIT LLC</div>
+
+                <nav class="footer__nav">
+                    <div class="footer__nav-item">Affiliate</div>
+                    <div class="footer__nav-item">Regulations</div>
+                    <div class="footer__nav-item">Terms</div>
+                    <div class="footer__nav-item">FAQ</div>
+                    <div class="footer__nav-item">Docs</div>
+                    <div class="footer__nav-item">Contacts</div>
+                </nav>
+
+                <div class="footer__social-media">
+                    <a href="#" class="footer__social-link">
+                        <i class="icon icon-social fa-brands fa-x-twitter" aria-label="X"></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class="icon icon-social fa-brands fa-discord" aria-label="Discord"></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class="icon icon-social fa-brands fa-telegram" aria-label="Telegram"></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class="icon icon-social fa-brands fa-instagram" aria-label="Instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/burger_menu.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/swap.js"></script>
+    <script src="js/trending.js"></script>
+    <script src="js/chart.js"></script>
+</body>
+</html>

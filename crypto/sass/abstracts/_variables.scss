@@ -1,0 +1,20 @@
+:root {
+    --color-section-bg: #1A1A1A;
+    --color-text-primary: #F0EDE5;
+    --color-text-secondary: #979797;
+    --color-menu-bg: #0e0e0e;
+    --color-link-hover: #00e597;
+    --color-icon-bg: #004030;
+    --color-border: #444;
+    
+    --glass: rgba(14,14,14,0.6);
+    --card-shadow: 0 0px 10px rgba(0, 229, 151, 0.5);
+}
+
+.positive {
+  color: greenyellow !important;
+}
+
+.negative {
+  color: red !important;
+}

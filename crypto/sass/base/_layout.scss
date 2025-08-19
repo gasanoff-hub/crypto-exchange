@@ -1,0 +1,43 @@
+@use "../abstracts/mixins" as a;
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 6.4rem 3rem auto auto 1fr 6.4rem;
+  grid-template-areas:
+    "header header"
+    "trending trending"
+    "swap chart"
+    "swap trade-history"
+    "account-panel trade-history"
+    "footer footer";
+  gap: 2rem;
+  min-height: 100vh;
+
+  @include a.respond(md) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 6.4rem 3rem auto 1fr auto auto;
+    grid-template-areas:
+      "header"
+      "trending"
+      "chart"
+      "swap"
+      "trade-history"
+      "footer";
+      gap: 3rem;
+      margin: 0 auto;
+  }
+}
+
+.liquidity-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6.4rem 1fr auto auto;
+  grid-template-areas: 
+  "header"
+  "liquidity"
+  "pagination"
+  "footer";
+  gap: 2rem;
+  min-height: 100vh;
+}

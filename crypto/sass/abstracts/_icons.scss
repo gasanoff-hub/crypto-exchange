@@ -1,0 +1,153 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins' as a;
+
+.icon {
+    cursor: pointer;
+    
+    &-notification, &-burger__menu {
+        font-size: 2rem;
+        color: var(--color-text-primary);
+        @include a.transition-color;
+
+        &:hover {
+            color: var(--color-link-hover);
+        }
+    }
+
+    &-rocket {
+        color: var(--color-link-hover);
+    }
+
+    &-shop {
+        @include a.flex(center, center);
+        color: var(--color-link-hover);
+        background: var(--color-icon-bg);
+        font-size: 1.5rem;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    &-social {
+        font-size: 1.7rem;
+        color: var(--color-text-secondary);
+        @include a.transition-color;
+
+        &:hover {
+            color: var(--color-link-hover);
+        }
+    }
+
+    &-history {
+        font-size: 2rem;
+        color: var(--color-link-hover);
+    }
+
+    &-short {
+        font-size: 0.8rem;
+    }
+
+    &-swap {
+        @include a.flex(center, center);
+        font-size: 1.7rem;
+        color: var(--color-text-secondary);
+        @include a.transition-color;
+
+        &:hover {
+            color: var(--color-link-hover);
+        }
+    }
+
+    &-search__input {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+        font-size: 1.6rem;
+        color: var(--color-border);
+        cursor: default;
+    }
+
+    &-swap__currency {
+        color: var(--color-text-secondary);
+        font-size: 2rem;
+    }
+
+    &-exchange {
+        @include a.flex(center, center);
+        font-size: 2rem;
+        color: var(--color-text-secondary);
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        background: var(--color-section-bg);
+        border: 1px solid var(--color-border);
+    }
+
+    &-swap__option {
+        margin: 0 0.5rem 0 0;
+    }
+
+    &-sort__up {
+        font-size: 0.8rem;
+        color: var(--color-text-primary);
+    }
+
+    &-search {
+        @include a.flex(center, center);
+        font-size: 2rem;
+        color: var(--color-text-secondary);
+        background: var(--color-section-bg);
+        width: 6rem;
+        height: 4rem;
+        border-left: 1px solid var(--color-border);     
+    }
+
+    &-star {
+        color: var(--color-text-secondary);
+    }
+
+    &-ratio {
+        margin: 0 0.5rem 0 0;
+    }
+
+    @include a.respond(xl) {
+        &-exchange {
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.5rem;
+        }
+
+        &-swap__currency {
+            font-size: 1.7rem;
+        }
+    }
+
+    @include a.respond(bp85) {
+        &-notification {
+            font-size: 1.7rem;
+        }
+    }
+
+    @include a.respond(xs) {
+        &-swap__currency {
+            font-size: 1.3rem;
+        }
+
+        &-search {
+            font-size: 1.7rem;
+        }
+    }
+
+    @include a.respond(xxs) {
+        &-swap{
+            font-size: 1.5rem;
+        }
+
+        &-exchange {
+            font-size: 1.2rem;
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}

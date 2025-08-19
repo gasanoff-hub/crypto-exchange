@@ -1,0 +1,42 @@
+@mixin flex(
+  $justify-content: flex-start, 
+  $align-items: stretch, 
+  $direction: row
+){
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $direction;
+}
+
+@mixin transition-bg-color {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+@mixin transition-color {
+  transition: color 0.2s ease-in-out;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == xxs {
+    @media (max-width: 410px) { @content; }
+  } @else if $breakpoint == xs {
+    @media (max-width: 502px) { @content; }
+  } @else if $breakpoint == sm {
+    @media (max-width: 690px) { @content; }
+  } @else if $breakpoint == bp85 {
+    @media (max-width: 850px) { @content;}
+  } @else if $breakpoint == md {
+    @media (max-width: 991px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: 1024px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: 1280px) { @content; }
+  } @else if $breakpoint == xxl {
+    @media (max-width: 1536px) { @content; }
+  } @else if $breakpoint == xxxl {
+    @media (max-width: 1920px) { @content; }
+  } @else if ($breakpoint == uhd) {
+    @media (max-width: 2560px) { @content; }
+  }
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <title>NEXBIT</title>
+</head>
+<body>
+    <div class="liquidity-grid">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container">
+                <!-- HEADER LOGO -->
+                <a href="#" class="header__logo">
+                    <img class="header__logo-img" src="/img/Logo.webp" alt="Logo">
+                    <span class="header__logo-text">NEXBIT</span>
+                </a>
+                <!-- HEADER MENU -->
+                <nav class="header__menu">
+                    <a href="/index.html" class="header__menu-link">Swap</a>
+                    <a href="/html/liquidity.html" class="header__menu-link">Liquidity</a>
+                    <a href="#" class="header__menu-link">Discover</a>
+                    <a href="#" class="header__menu-link">About</a>
+                    <button class="btn btn-connect__mobile">Connect Wallet</button>
+                </nav>
+                <!-- HEADER ACTIONS -->
+                <div class="header__actions">
+                    <button class="btn btn-connect">Connect Wallet</button>
+                    <i class="icon icon-notification fa-solid fa-bell"></i>
+
+                    <!-- LANGUAGE SELECT -->
+                    <div class="header__language">
+                        <div class="header__language--selected">
+                            <img class="header__selected--flag" src="/img/United_Kingdom_flag.webp" alt="EN" />
+                        </div>
+
+                        <div class="header__language--overlay hidden"></div>
+
+                        <!--LANGUAGE OPTIONS -->
+                        <div class="header__language--options hidden">
+                            <h1 class="header__language--title">CHOOSE YOUR LANGUAGE</h1>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="en">
+                                <img class="header__language--flag" src="/img/United_Kingdom_flag.webp" alt="EN" />
+                                <span class="header__language--name">English</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="az">
+                                <img class="header__language--flag" src="/img/Azerbaijan_flag.webp" alt="AZ" />
+                                <span class="header__language--name">Azerbaijan</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="ru">
+                                <img class="header__language--flag" src="/img/Russia_flag.webp" alt="RU" />
+                                <span class="header__language--name">Russia</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="ZH">
+                                <img class="header__language--flag" src="/img/china_flag.webp" alt="ZH" />
+                                <span class="header__language--name">China</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="FR">
+                                <img class="header__language--flag" src="/img/French_flag.webp" alt="FR" />
+                                <span class="header__language--name">French</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="DE">
+                                <img class="header__language--flag" src="/img/Germany_Flag.webp" alt="DE" />
+                                <span class="header__language--name">Germany</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="JA">
+                                <img class="header__language--flag" src="/img/Japanese_flag.webp" alt="JA" />
+                                <span class="header__language--name">Japanese</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="KO">
+                                <img class="header__language--flag" src="/img/Korean_flag.webp" alt="KO" />
+                                <span class="header__language--name">Korean</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="PT">
+                                <img class="header__language--flag" src="/img/Portuguese_flag.webp" alt="PT" />
+                                <span class="header__language--name">Portuguese</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="ES">
+                                <img class="header__language--flag" src="/img/Spanish_flag.webp" alt="ES" />
+                                <span class="header__language--name">Spanish</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="TR">
+                                <img class="header__language--flag" src="/img/Turkey_flag.webp" alt="TR" />
+                                <span class="header__language--name">Turkey</span>
+                            </div>
+                            <!-- OPTIONS -->
+                            <div class="header__language--option" data-lang="IN">
+                                <img class="header__language--flag" src="/img/india_flag.webp" alt="IN" />
+                                <span class="header__language--name">India</span>
+                            </div>
+                        </div>
+                        <!--LANGUAGE OPTION END -->
+                    </div> 
+
+                    <button class="btn btn-burger__menu">
+                        <i class="icon icon-burger__menu fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="nav__toggle"></div>
+        </header>
+        
+        
+        <main class="liquidity-table__container">
+                <table class="liquidity-table">
+                    <thead>
+                        <tr class="liquidity-header-row">
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>1h %</th>
+                            <th>24h %</th>
+                            <th>7d %</th>
+                            <th>Market Cap</th>
+                            <th>Volume(24h)</th>
+                            <th>Circulating Supply</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <!-- <tr class="liquidity-row">
+                            <td class="liquidity-rank">1</td>
+                            <td class="liquidity-name">
+                                <img src="/img/bnb.webp" alt="Bitcoin" class="coin-icon">
+                                <span class="coin-title">Bitcoin</span>
+                                <span class="coin-symbol">BTC</span>
+                            </td>
+                            <td class="liquidity-price">$115,467.94</td>
+                            <td class="liquidity-change change-1h positive">0.25%</td>
+                            <td class="liquidity-change change-24h negative">-2.32%</td>
+                            <td class="liquidity-change change-7d negative">-3.92%</td>
+                            <td class="liquidity-marketcap">$2,298,753,455,976</td>
+                            <td class="liquidity-volume">$66,950,147,131</td>
+                            <td class="liquidity-supply">19.9M BTC</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+        </main>
+
+
+        <div class="pagination"></div>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__copyright">2025 © NEXBIT LLC</div>
+
+                <nav class="footer__nav">
+                    <div class="footer__nav-item">Affiliate</div>
+                    <div class="footer__nav-item">Regulations</div>
+                    <div class="footer__nav-item">Terms</div>
+                    <div class="footer__nav-item">FAQ</div>
+                    <div class="footer__nav-item">Docs</div>
+                    <div class="footer__nav-item">Contacts</div>
+                </nav>
+
+                <div class="footer__social-media">
+                    <a href="#" class="footer__social-link">
+                        <i class="icon icon-social fa-brands fa-x-twitter" aria-label="X"></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class="icon icon-social fa-brands fa-discord" aria-label="Discord"></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class="icon icon-social fa-brands fa-telegram" aria-label="Telegram"></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class="icon icon-social fa-brands fa-instagram" aria-label="Instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/liquidity.js"></script>
+    <script src="/js/burger_menu.js"></script>
+    <script src="/js/language.js"></script>
+</body>
+</html>
